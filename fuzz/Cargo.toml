@@ -1,0 +1,25 @@
+[package]
+name = "bounded-spsc-queue-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.bounded-spsc-queue]
+path = ".."
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "produce_consume"
+path = "fuzz_targets/produce_consume.rs"
+test = false
+doc = false

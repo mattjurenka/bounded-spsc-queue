@@ -3,4 +3,4 @@ target: produce-consume
 duration: 90
 
 cmds:
-    - cmd: /produce-consume
+    - cmd: /produce_consume
